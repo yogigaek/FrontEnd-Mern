@@ -16,7 +16,7 @@ const Home = () => {
 
   const getProduct = async () => {
     setLoading(true)
-    const response = await axios.get(`http://localhost:3000/api/v4/product`);
+    const response = await axios.get(`https://fullstack-mern-yogi.herokuapp.com/api/v4/product`);
     if (!response) {
       setLoading(false)
       seterror(true);
@@ -29,7 +29,7 @@ const Home = () => {
 
   const deleteProduct = async (id) => {
     if ( window.confirm(`Yakin ingin menghapus data ? `) ){
-      const response = await axios.delete(`http://localhost:3000/api/v4/product/${id}`);
+      const response = await axios.delete(`https://fullstack-mern-yogi.herokuapp.com/api/v4/product/${id}`);
       if (response.status === 200){
         alert(`berhasil delete data dengan id : ${id}`);
         getProduct();
@@ -41,7 +41,7 @@ const Home = () => {
     if(search === '') {
       getProduct()
     } else {
-      axios.get(`http://localhost:3000/api/v4/product/query/${search}`)
+      axios.get(`https://fullstack-mern-yogi.herokuapp.com/api/v4/product/query/${search}`)
       .then(res => {
         const products = res.data
         setProduct(products)
