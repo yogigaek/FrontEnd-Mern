@@ -14,7 +14,7 @@ const Detail = () => {
   },[id]);
 
   const detailProduct = async (id) => {
-    const response = await axios.get(`https://fullstack-mern-yogi.herokuapp.com/api/v4/product/${id}`);
+    const response = await axios.get(`https://yogi-mern.herokuapp.com/api/v4/product/${id}`);
       if (response.status === 200){
         setProduct(response.data);
       }
