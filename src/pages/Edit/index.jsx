@@ -13,7 +13,7 @@ const Edit = () => {
 
   useEffect(() => {
     const getProductById = async () => {
-      const response = await axios.get(`https://yogi-mern.herokuapp.com/v4/product/${id}`);
+      const response = await axios.get(`https://yogi-mern.herokuapp.com/api/v4/product/${id}`);
       setName(response.data.name);
       setPrice(response.data.price);
       setStock(response.data.stock);
