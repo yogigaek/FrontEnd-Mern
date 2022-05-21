@@ -11,7 +11,7 @@ const App = () => {
       <Router>
         <Navigation />
         <Routes >
-          <Route path="/" element={ <Home />} />
+          <Route path="/" exact element={ <Home />} />
           <Route path="/detail/:id" element={ <Detail />} />
           <Route path="/edit/:id" element={ <Edit />} />
           <Route path="/tambah" element={ <Tambah />} />

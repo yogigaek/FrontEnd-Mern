@@ -13,7 +13,7 @@ const Edit = () => {
 
   useEffect(() => {
     const getProductById = async () => {
-      const response = await axios.get(`https://yogi-mern.herokuapp.com/api/v4/product/${id}`);
+      const response = await axios.get(`https://mern-yogi-fullstack.herokuapp.com/api/v4/product/${id}`);
       setName(response.data.name);
       setPrice(response.data.price);
       setStock(response.data.stock);
@@ -25,7 +25,7 @@ const Edit = () => {
   const updateProduct = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`https://yogi-mern.herokuapp.com/api/v4/product/${id}`, {
+      await axios.patch(`https://mern-yogi-fullstack.herokuapp.com/api/v4/product/${id}`, {
         name: name,
         price: price,
         stock: stock,

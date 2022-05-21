@@ -14,7 +14,7 @@ const Tambah = () => {
   const saveProduct = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(`https://yogi-mern.herokuapp.com/api/v4/product`, {
+      await axios.post(`https://mern-yogi-fullstack.herokuapp.com/api/v4/product`, {
         name: name,
         price: price,
         stock: stock,
